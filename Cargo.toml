@@ -1,0 +1,8 @@
+[package]
+name = "iron_vhosts"
+version = "0.1.0"
+authors = ["Casey Allred <casey@modernizedmedia.com>"]
+
+[dependencies]
+iron = "*"
+url = "*"
