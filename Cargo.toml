@@ -2,7 +2,7 @@
 name = "iron_vhosts"
 version = "0.1.0"
 authors = ["Casey Allred <casey@modernizedmedia.com>"]
-description = "A Iron addon to allow requests to be routed based on the request host"
+description = "An Iron addon to allow requests to be routed based on the host."
 documentation = "https://github.com/sbditto85/iron_vhosts"
 homepage = "https://github.com/sbditto85/iron_vhosts"
 repository = "https://github.com/sbditto85/iron_vhosts"
