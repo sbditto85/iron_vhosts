@@ -2,6 +2,27 @@
 name = "iron_vhosts"
 version = "0.1.0"
 authors = ["Casey Allred <casey@modernizedmedia.com>"]
+description = "A Iron addon to allow requests to be routed based on the request host"
+documentation = "https://github.com/sbditto85/iron_vhosts"
+homepage = "https://github.com/sbditto85/iron_vhosts"
+repository = "https://github.com/sbditto85/iron_vhosts"
+readme = "..."
+
+# This is a small list of keywords used to categorize and search for this
+# package.
+keywords = ["...", "..."]
+
+# This is a string description of the license for this package. Currently
+# crates.io will validate the license provided against a whitelist of known
+# license identifiers from http://spdx.org/licenses/. Multiple licenses can
+# be separated with a `/`
+license = "..."
+
+# If a project is using a nonstandard license, then this key may be specified in
+# lieu of the above key and must point to a file relative to this manifest
+# (similar to the readme key)
+license-file = "..."
+
 
 [dependencies]
 iron = "*"
