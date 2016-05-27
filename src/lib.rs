@@ -3,7 +3,7 @@ extern crate url;
 
 use std::collections::HashMap;
 use iron::{Handler, IronResult, Request, Response};
-use url::Host::{Domain, Ipv6};
+use url::Host::{Domain, Ipv4, Ipv6};
 
 pub struct Vhosts {
     default: Box<Handler>,
@@ -54,12 +54,13 @@ impl Handler for Vhosts {
         //get the host from the request
         let host = match req.url.host {
             Domain(ref h) => h.clone(),
+            Ipv4(ref h)   => format!("{}", h),
             Ipv6(ref h)   => format!("{}", h)
         };
 
         //get the handler associated to the host
         let handler = match self.vhosts.get(&*host){
-            Some(box_handler) => &*box_handler,
+            Some(box_handler) => box_handler,
             None              => &self.default
         };
         

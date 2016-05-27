@@ -13,4 +13,7 @@ license-file = "LICENSE"
 
 [dependencies]
 iron = "*"
-url = "*"
+url = "^0.5"
+
+[dev-dependencies]
+router = "0.1.1"
