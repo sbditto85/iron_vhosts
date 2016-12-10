@@ -13,8 +13,8 @@ fn main () {
     let mut vhosts = Vhosts::new(|_: &mut Request| Ok(Response::with((status::Ok, "vhost"))));
     
     let mut router = Router::new();
-    router.get("/", localhost_handler);
-    router.get("/:query", localhost_handler);
+    router.get("/", localhost_handler, "root");
+    router.get("/:query", localhost_handler, "query");
 
     //Add any host specific handlers
     vhosts.add_host("localhost", router);
