@@ -5,7 +5,7 @@ use iron::{Handler, IronResult, Request, Response};
 
 pub struct Vhosts {
     default: Box<Handler>,
-    vhosts: HashMap<&'static str, Box<Handler>>,
+    vhosts: HashMap<String, Box<Handler>>,
 }
 
 impl Vhosts {
@@ -48,8 +48,8 @@ impl Vhosts {
     ///     Iron::new(vhosts).http("localhost:3000").unwrap();
     /// }
     /// ```
-    pub fn add_host<H: Handler>(&mut self, host: &'static str, h: H) -> Option<Box<Handler>> {
-        self.vhosts.insert(host, Box::new(h))
+    pub fn add_host<H: Handler, I:Into<String> >(&mut self, host: I, h: H) -> Option<Box<Handler>> {
+        self.vhosts.insert(host.into(), Box::new(h))
     }
 
 }
