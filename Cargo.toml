@@ -1,6 +1,6 @@
 [package]
 name = "iron_vhosts"
-version = "0.4.0"
+version = "0.4.1"
 authors = ["Casey Allred <casey@modernizedmedia.com>"]
 description = "An Iron addon to allow requests to be routed based on the host."
 documentation = "https://github.com/sbditto85/iron_vhosts"
